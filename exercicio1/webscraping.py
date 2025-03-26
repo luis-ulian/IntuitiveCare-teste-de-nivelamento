@@ -1,11 +1,11 @@
-import requests
+from requests import get
 from bs4 import BeautifulSoup
 from urllib.request import urlretrieve
 from zipfile import ZipFile, ZIP_DEFLATED
 from os import mkdir, remove
 
 url = 'https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos'
-page = requests.get(url)
+page = get(url)
 
 soup = BeautifulSoup(page.text, 'html.parser')
 
