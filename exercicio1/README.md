@@ -1,6 +1,4 @@
 <h1>1. TESTE DE WEB SCRAPING</h1>
-<br/>
-
 <p1>Este teste deve ser realizado nas linguagens Python ou Java. E o código deverá executar o/a:</p1>
 <br/>
 <br/>
