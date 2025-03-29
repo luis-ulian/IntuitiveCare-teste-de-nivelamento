@@ -95,5 +95,3 @@ INSERT INTO dbo.Demonstracoes_Contabeis SELECT t.DTA,
 drop table ##tmp
 
 drop function dbo.InserirBulk
-
-SELECT * from dbo.Demonstracoes_Contabeis
