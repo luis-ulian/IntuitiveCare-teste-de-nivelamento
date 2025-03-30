@@ -1,7 +1,5 @@
 <h1>2. TESTE DE TRANSFORMAÇÃO DE DADOS</h1> 
-<p1>Crie um código em Python ou Java que execute as seguintes tarefas:</p1>
-<br/>
-<br/>
+<h2>Crie um código em Python ou Java que execute as seguintes tarefas:</h2>
 <p2>2.1. Extraia os dados da tabela Rol de Procedimentos e Eventos em Saúde do PDF do Anexo I do teste 1 (todas as páginas)</p2> <br/><br/>
 <p2>2.2. Salve os dados em uma tabela estruturada, em formato csv.</p2> <br/><br/>
 <p2>2.3. Compacte o csv em um arquivo denominado "Teste_{seu_nome}.zip".</p2> <br/><br/>
