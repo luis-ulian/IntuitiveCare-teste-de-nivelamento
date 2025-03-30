@@ -2,7 +2,7 @@ from tabula.io import read_pdf
 from zipfile import ZipFile
 from os import mkdir, remove
 from datetime import datetime
-import pandas as pd
+from pandas import read_csv
 from zipfile import ZipFile, ZIP_DEFLATED
 
 unzip_file = "./exercicio1/arquivos/Anexos.zip"
@@ -21,7 +21,7 @@ output_path = f"./exercicio2/arquivos/{datetime.now().strftime("%H%M%S")}.csv"
 
 read_pdf(pdf_to_read, pages="3-181", encoding="utf-8", output_format="dataframe", lattice=False, guess=False, output_path=output_path)
 
-df = pd.read_csv(output_path, header=0, encoding='utf-8', on_bad_lines='skip')
+df = read_csv(output_path, header=0, encoding='utf-8', on_bad_lines='skip')
 df = df.replace(r"\r", " ", regex=True)
 df = df.drop_duplicates(keep=False)
 

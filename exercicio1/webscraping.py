@@ -18,8 +18,10 @@ for anchor in anchors:
     if anchor["href"].find(".pdf") > 0:
         links.append(anchor["href"])
 
+
 while True:
     try:
+        print("Aguarde, baixando arquivos...\n")
         urlretrieve(links[0], './exercicio1/arquivos/AnexoI.pdf')
         urlretrieve(links[1], './exercicio1/arquivos/AnexoII.pdf') 
         break
