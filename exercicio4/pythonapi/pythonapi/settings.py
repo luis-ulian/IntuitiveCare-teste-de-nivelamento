@@ -16,9 +16,10 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8081",
+    "http://localhost:8080",
     "http://127.0.0.1:8000",
     "http://localhost:8081",
+    "http://localhost:8082"
 ]
 
 # Quick-start development settings - unsuitable for production

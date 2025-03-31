@@ -16,3 +16,4 @@ def get_empresas(request):
     tabela_empresas = tabela_empresas.drop(columns_to_ignore, axis=1)
 
     return Response(tabela_empresas.to_json(orient='records'))
+    
