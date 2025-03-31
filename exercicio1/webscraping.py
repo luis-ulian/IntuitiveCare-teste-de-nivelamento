@@ -21,7 +21,7 @@ for anchor in anchors:
 
 while True:
     try:
-        print("Aguarde, baixando arquivos...\n")
+        print("Baixando arquivos, por favor aguarde...\n")
         urlretrieve(links[0], './exercicio1/arquivos/AnexoI.pdf')
         urlretrieve(links[1], './exercicio1/arquivos/AnexoII.pdf') 
         break
@@ -36,6 +36,8 @@ with ZipFile(zip_path, 'w', ZIP_DEFLATED) as zip:
 
 remove("./exercicio1/arquivos/AnexoI.pdf")
 remove("./exercicio1/arquivos/AnexoII.pdf")
+
+print("Arquivos baixados e compactados com sucesso!\n")
 
 
 

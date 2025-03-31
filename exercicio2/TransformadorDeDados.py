@@ -16,10 +16,12 @@ with ZipFile(unzip_file, 'r') as zip:
         except FileNotFoundError:
             mkdir("./exercicio2/arquivos/")
 
+print("Carregando, por favor aguarde...")
+
 pdf_to_read = "./exercicio2/arquivos/AnexoI.pdf"
 output_path = f"./exercicio2/arquivos/{datetime.now().strftime("%H%M%S")}.csv"
 
-read_pdf(pdf_to_read, pages="3-181", encoding="utf-8", output_format="dataframe", lattice=False, guess=False, output_path=output_path)
+read_pdf(pdf_to_read, pages="3-181", encoding="utf-8", output_format="dataframe", lattice=False, guess=False, output_path=output_path, silent=True)
 
 df = read_csv(output_path, header=0, encoding='utf-8', on_bad_lines='skip')
 df = df.replace(r"\r", " ", regex=True)
@@ -35,3 +37,5 @@ with ZipFile(zip_path, 'w', ZIP_DEFLATED) as zip:
 remove("./exercicio2/arquivos/AnexoI.pdf")
 remove("./exercicio2/arquivos/AnexoII.pdf")
 remove(output_path)
+
+print("Arquivo lido e compactado com sucesso!")
